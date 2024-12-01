@@ -20,3 +20,9 @@ guias iniciais: https://go.dev/doc/tutorial/
 
 - go mod init example/greetings
 - sempre que criar novo modulo editar o place para não dar problema em produção:go mod edit -replace example.com/greetings=../greetings
+- go test -v mostra testes - arquivos com "\_test.go" no final e funções iniciadas com Test
+- go build gera um executável (rodar com ./NomeDoArquivo)
+- configurar o install path para buildar num local cohenecido: go list -f '{{.Target}}' vê onde deve instalar
+- export PATH=$PATH:/home/christiandoramo/go/bin/hello salva o path de instalação
+- depois de exportar o path do build para o local, instalar o build na msm pasta com gi install
+- após isso, ao digitar o nome do arquivo em qualquer parte do terminal executará o programa instalado
