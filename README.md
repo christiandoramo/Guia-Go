@@ -14,6 +14,7 @@ guias iniciais: https://go.dev/doc/tutorial/
 
 - criar modulo - go mod init example/hello
 - rodar código go - go run .
+- go get "caminho" pega pacote online
 - go mod tidy atualiza as dependencias/pacotes go.mod e o historico de dependencias/autenticação go.sum
 
 ## Iniciando projeto 2
@@ -25,4 +26,10 @@ guias iniciais: https://go.dev/doc/tutorial/
 - configurar o install path para buildar num local cohenecido: go list -f '{{.Target}}' vê onde deve instalar
 - export PATH=$PATH:/home/christiandoramo/go/bin/hello salva o path de instalação
 - depois de exportar o path do build para o local, instalar o build na msm pasta com gi install
-- após isso, ao digitar o nome do arquivo em qualquer parte do terminal executará o programa instalado
+- após isso, ao digitar o nome do arquivo em qualquer parte do terminal executará o programa instalado. ex: hello
+
+## Iniciando projeto 3
+
+- usar na pasta fora de hello - go work init ./hello (inicia um workspace)
+- com isso pode rodar o modulo inteiro com - go run ./hello
+- go work use ./example/hello (adiciona ao workspace o codigo de ./example.hello importado)
